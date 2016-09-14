@@ -102,11 +102,6 @@ class CaixaEconomicaFederalSIGCB extends Boleto
         $this->geraCodigoDeBarras();
     }
 
-    public function salvarRemessa()
-    {
-        $retorno = new Remessa();
-    }
-
     protected function geraContaCedente()
     {
         $this->conta_cedente = $this->formataNumero($this->params['conta_cedente'], 6, 0);

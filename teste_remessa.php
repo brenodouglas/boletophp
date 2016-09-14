@@ -4,18 +4,18 @@ $codigo_banco = Cnab\Banco::CAIXA;
 $arquivo = new Cnab\Remessa\Cnab400\Arquivo($codigo_banco);
 $arquivo->configure(array(
     'data_geracao'  => new DateTime(),
-    'data_gravacao' => new DateTime(), 
+    'data_gravacao' => new DateTime(),
     'nome_fantasia' => 'Nome Fantasia da sua empresa', // seu nome de empresa
     'razao_social'  => 'Razão social da sua empresa',  // sua razão social
     'cnpj'          => '111', // seu cnpj completo
     'banco'         => $codigo_banco, //código do banco
     'logradouro'    => 'Logradouro da Sua empresa',
     'numero'        => 'Número do endereço',
-    'bairro'        => 'Bairro da sua empresa', 
+    'bairro'        => 'Bairro da sua empresa',
     'cidade'        => 'Cidade da sua empresa',
     'uf'            => 'Sigla da cidade, ex SP',
     'cep'           => 'CEP do endereço da sua cidade',
-    'agencia'       => '1111', 
+    'agencia'       => '1111',
     'conta'         => '22222', // número da conta
     'conta_dac'     => '2', // digito da conta
 ));
@@ -51,4 +51,4 @@ $arquivo->insertDetalhe(array(
 ));
 
 // para salvar
-$arquivo->save('meunomedearquivo.txt');
+$arquivo->save('meunomedearquivo.txt');  
