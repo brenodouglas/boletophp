@@ -8,7 +8,7 @@ namespace BoletoPHP\Model;
 class Remessa
 {
     /**
-     * @property SQLite3
+     * @var db SQLite3
      */
     private $db;
 
@@ -25,6 +25,25 @@ class Remessa
     public function save($line)
     {
         return $this->db->exec("INSERT INTO retorno(line) VALUES('${line}')");
+    }
+
+    /**
+     * @return Generator
+     */
+    public function findAll()
+    {
+        $results = $this->db->query('SELECT * FROM retorno');
+        while ($row = $results->fetchArray())
+            yield $row;
+    }
+
+    /**
+     * @param int id
+     * @return array
+     */
+    public function find($id)
+    {
+        return $this->db->querySingle('SELECT * FROM retorno');
     }
 
     /**

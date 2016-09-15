@@ -2,18 +2,24 @@
 namespace BoletoPHP\Remessa;
 
 use BoletoPHP\Model\Remessa;
+use Cnab\Banco;
+use Cnab\Remessa\Cnab240\Arquivo;
 
 class Caixa implements \Iterator, \Countable
 {
     private $dataCedente;
     private $dadosBoletos;
+    private $remessa;
     private $current = 0;
     private $model;
+    private $dir = "/tmp/";
 
     public function __construct(array $dadosDoCedente)
     {
         $this->dataCedente = $dadosDoCedente;
         $this->model = new Remessa();
+        $this->remessa =  new Arquivo(Banco::CAIXA);
+        $this->remessa->configure($dadosDoCedente);
     }
 
     public function push(array $dados)
@@ -21,9 +27,25 @@ class Caixa implements \Iterator, \Countable
         $this->dadosBoletos[] = $dados;
     }
 
-    public function save($dir = "/tmp")
+    public function setDir($dir)
     {
+        if(substr($dir, -1) != "/")
+            $dir .= "/";
+
+        $this->dir = $dir;
+    }
+
+    public function save()
+    {
+        $dateTime = new \DateTime();
+
         $this->model->save(json_encode($this->dadosBoletos));
+        foreach( $this->dadosBoleto as $boleto)
+            $this->remessa->insertDetalhe($boleto);
+
+        $dir = $this->dir.$dateTime->format("d-m-Y")."-remessa.txt";
+        $this->remessa->save($dir);
+        return $dir;
     }
 
     public function count()
@@ -33,7 +55,8 @@ class Caixa implements \Iterator, \Countable
 
     public function downloadUri()
     {
-
+        $dateTime = new \DateTime();
+        retun $dir = $this->dir.$dateTime->format("d-m-Y")."-remessa.txt";
     }
 
   	public function current()

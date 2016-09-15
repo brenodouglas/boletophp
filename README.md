@@ -117,48 +117,48 @@ Já vimos como nomear os arquivos e classes. Veremos mais alguns padrões, **que
 
 * Métodos nomeados em lower camelCase.
 
-* Tudo em português, variaveis, nomes de arquivos, m�todos, commits etc. Sei que tem algumas coias que estão em ingles, ou foram copiadas do outro ou criado por mim, mais no refactory irá tudo para português. Por isso c�digo novo seguindo isto.
+* Tudo em português, variaveis, nomes de arquivos, métodos, commits etc. Sei que tem algumas coias que estão em ingles, ou foram copiadas do outro ou criado por mim, mais no refactory irá tudo para português. Por isso c�digo novo seguindo isto.
 
 * Defina sempre a visibilidade dos métodos e atributos para a mais restrita possivel.
 
 * Nada de <code>\_</code> ou <code>\_\_</code> para dizer se um método é privado ou protected para isso temos os declaradores de visibilidade.
 
-* Agora vem a parte mais feia que falei =/, nos métodos que por um acaso tivermos que copiar do <code>v1.0</code> [como o](https://github.com/maurogeorge/boletophp/blob/refactory-oop/library/BoletoPHP/Boletos/Boleto.php#L259) manter a mesma nomenclatura e implementação, por mais feia que seja nos ajudara a encontrar seu equivalente no v1.0 se for necessário. Claro que antes de integrarmos tudo no master, iremos nomear tudo para nomes mais bonitos e de acordo com o padrão, al�m de refatorar S2.
+* Agora vem a parte mais feia que falei =/, nos métodos que por um acaso tivermos que copiar do <code>v1.0</code> [como o](https://github.com/maurogeorge/boletophp/blob/refactory-oop/library/BoletoPHP/Boletos/Boleto.php#L259) manter a mesma nomenclatura e implementação, por mais feia que seja nos ajudara a encontrar seu equivalente no v1.0 se for necessário. Claro que antes de integrarmos tudo no master, iremos nomear tudo para nomes mais bonitos e de acordo com o padrão, além de refatorar S2.
 
-* Sempre seguirmos a [PSR](https://github.com/php-fig/fig-standards). Pode usar, recomendo, o [PHP Coding Standards Fixer](http://cs.sensiolabs.org/) para deixar o c�digo de acordo com a PSR-2.
+* Sempre seguirmos a [PSR](https://github.com/php-fig/fig-standards). Pode usar, recomendo, o [PHP Coding Standards Fixer](http://cs.sensiolabs.org/) para deixar o código de acordo com a PSR-2.
 
-* C�digo sem teste n�o ser� aceito. Realize os testes com o [PHPUnit](https://github.com/sebastianbergmann/phpunit/).
+* Código sem teste não será aceito. Realize os testes com o [PHPUnit](https://github.com/sebastianbergmann/phpunit/).
 
-* Siga a defini��o de [namespace](http://br2.php.net/manual/en/language.namespaces.php).
+* Siga a definição de [namespace](http://br2.php.net/manual/en/language.namespaces.php).
 
-* Todo �ltimo item de um array deve conter a virgula. Baseado na proposta da [PEP8](https://dev.launchpad.net/PythonStyleGuide#Multiline_braces).
+* Todo último item de um array deve conter a virgula. Baseado na proposta da [PEP8](https://dev.launchpad.net/PythonStyleGuide#Multiline_braces).
 
-Ps.: Caso observe alguma conven��o quebrada, sinta-se livre para corrigir ou reportar, para consertarmos e mantermos o projeto sempre melhor.
+Ps.: Caso observe alguma convenção quebrada, sinta-se livre para corrigir ou reportar, para consertarmos e mantermos o projeto sempre melhor.
 
 ### Dicas
 
-* Sempre pode olhar os arquivos de c�digo em <code>library/BoletoPHP/Boletos/</code> e seus testes em <code>tests/library/BoletoPHP/Boletos/</code> caso tenha alguma d�vida.
-* Nos testes � gerado uma variavel <code>$time</code> no <code>setUp</code>, ela � usada para definir a data atual, em que voc� est� escrevendo o boleto, altere-a de acordo com o time do dia e hora em que estiver trabalhando.
-* Acho legal abrir um boleto do <code>v1.0</code> em uma janela, e pegar os valores dele e colocar como o esperado no seu teste. Pois s�o os valores que estamos esperando no teste um boleto v�lido.
+* Sempre pode olhar os arquivos de código em <code>library/BoletoPHP/Boletos/</code> e seus testes em <code>tests/library/BoletoPHP/Boletos/</code> caso tenha alguma dúvida.
+* Nos testes é gerado uma variavel <code>$time</code> no <code>setUp</code>, ela é usada para definir a data atual, em que você está escrevendo o boleto, altere-a de acordo com o time do dia e hora em que estiver trabalhando.
+* Acho legal abrir um boleto do <code>v1.0</code> em uma janela, e pegar os valores dele e colocar como o esperado no seu teste. Pois são os valores que estamos esperando no teste um boleto válido.
 * Recomendo se possivel, iniciar e terminar um boleto no mesmo dia. Isso por que devido a ter testes sensiveis a data, ao abrir o boleto do <code>v1.0</code> para ver qual o valor que deve ser o experado no teste, no dia seguinte ele tera mudado e seus testes quebraram. Tomei uma porrada por isso =/
 
 ### Rodando os testes
 
-Basta acessar o diret�rio de testes e rodar o phpunit.
+Basta acessar o diretório de testes e rodar o phpunit.
 
         $ cd /my/BoletoPHP/tests
         $ phpunit .
 
 ## Alternativas
 
-1. [Boleto Library PHP](https://github.com/drupalista-br/Boleto) - Outra implementa��o em PHP
-2. [pyboleto](https://github.com/eduardocereto/pyboleto) - Implementa��o em Python
+1. [Boleto Library PHP](https://github.com/drupalista-br/Boleto) - Outra implementação em PHP
+2. [pyboleto](https://github.com/eduardocereto/pyboleto) - Implementação em Python
 
 ## Sobre o readme
 
-Dever� ser revisto, antes de integrar no master para representar o estado real do projeto e as novas informa��es.
+Deverá ser revisto, antes de integrar no master para representar o estado real do projeto e as novas informações.
 
 ## Para o futuro
 
-* Definir licen�a
+* Definir licença
 * Usar o [Travis CI](http://travis-ci.org/)
