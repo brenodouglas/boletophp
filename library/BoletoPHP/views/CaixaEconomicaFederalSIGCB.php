@@ -3,7 +3,7 @@
   <head>
     <title><?php echo $identificacao; ?></title>
     <meta http-equiv=Content-Type content=text/html charset=ISO-8859-1>
-    <meta name="Generator" content="Projeto BoletoPHP - www.boletophp.com.br - Licença GPL" />
+    <meta name="Generator" content="Projeto BoletoPHP - www.boletophp.com.br - Licenï¿½a GPL" />
     <style type=text/css>
       <!--.cp {  font: bold 10px Arial; color: black}
         <!--.ti {  font: 9px Arial, Helvetica, sans-serif}
@@ -20,7 +20,7 @@
       <tr>
         <td valign="top" class="cp">
           <div align="center">
-            Instruções de Impressão
+            InstruÃ§Ãµes de ImpressÃ£o
           </div>
         </td>
       </tr>
@@ -29,24 +29,24 @@
           <div align="left">
             <p>
             <li>
-              Imprima em impressora jato de tinta (ink jet) ou laser em qualidade normal ou alta (Não use modo econômico).
+              Imprima em impressora jato de tinta (ink jet) ou laser em qualidade normal ou alta (NÃ£o use modo econÃ´mico).
             </li>
             <li>
-              Utilize folha A4 (210 x 297 mm) ou Carta (216 x 279 mm) e margens mínimas à esquerda e à direita do formulário.
+              Utilize folha A4 (210 x 297 mm) ou Carta (216 x 279 mm) e margens mÃ­nimas Ã  esquerda e Ã  direita do formulÃ¡rio.
             </li>
             <li>
-              Corte na linha indicada. Não rasure, risque, fure ou dobre a região onde se encontra o código de barras.
+              Corte na linha indicada. NÃ£o rasure, risque, fure ou dobre a regiÃ£o onde se encontra o cÃ³digo de barras.
             </li>
             <li>
-              Caso não apareça o código de barras no final, clique em F5 para atualizar esta tela.
+              Caso nÃ£o apareÃ§a o cÃ³digo de barras no final, clique em F5 para atualizar esta tela.
             </li>
             <li>
-              Caso tenha problemas ao imprimir, copie a seqüencia numérica abaixo e pague no caixa eletrônico ou no internet banking:
+              Caso tenha problemas ao imprimir, copie a sequÃªncia numÃ©rica abaixo e pague no caixa eletrÃ´nico ou no internet banking:
             </li>
             </p>
             <br />
             <span class="ld2">
-            &nbsp;&nbsp;&nbsp;&nbsp;Linha Digitável: &nbsp;<?php echo $linha_digitavel; ?>
+            &nbsp;&nbsp;&nbsp;&nbsp;Linha Digitï¿½vel: &nbsp;<?php echo $linha_digitavel; ?>
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;Valor: &nbsp;&nbsp;R$ <?php echo $valor_boleto; ?>
             <br>
@@ -85,7 +85,7 @@
           <img src="../imagens/logo_empresa.png" />
         </td>
         <td class=ti width=455>
-          <?php echo $identificacao; ?> 
+          <?php echo $identificacao; ?>
           <?php echo isset($cpf_cnpj) ? "<br>" . $cpf_cnpj : '' ?>
           <br />
           <?php echo $endereco; ?><br />
@@ -103,7 +103,7 @@
           </span>
         </td>
         <td width="3" valign="bottom">
-          <img height="22" src="../imagens/3.png" width="2" border="0" /> 
+          <img height="22" src="../imagens/3.png" width="2" border="0" />
         </td>
         <td class="cpt" width="68" valign="bottom">
           <div align="center">
@@ -135,13 +135,13 @@
       <tbody>
         <tr>
           <td class="ct" valign="top" width="7" height="13"><img height="13" src="../imagens/1.png" width="1" border="0"></td>
-          <td class="ct" valign="top" width="368" height="13">Beneficiário</td>
+          <td class="ct" valign="top" width="368" height="13">Beneficiï¿½rio</td>
           <td class="ct" valign="top" width="7" height="13"><img height="13" src="../imagens/1.png" width="1" border="0"></td>
           <td class="ct" valign="top" width="136" height="13">
             CPF/CNPJ
           </td>
           <td class="ct" valign="top" width="7" height="13"><img height="13" src="../imagens/1.png" width="1" border="0"></td>
-          <td class="ct" valign="top" width="134" height="13">Agência / Código do Beneficiário</td>
+          <td class="ct" valign="top" width="134" height="13">Agï¿½ncia / Cï¿½digo do Beneficiï¿½rio</td>
         </tr>
         <tr>
           <td class="cp" valign="top" width="7" height="12"><img height="12" src="../imagens/1.png" width="1" border="0"></td>
@@ -159,7 +159,7 @@
             <?php echo $agencia_codigo; ?>
             </span>
           </td>
-          
+
         </tr>
         <tr>
           <td valign=top width=7 height=1><img height=1 src="../imagens/2.png" width=7 border=0></td>
@@ -175,7 +175,7 @@
       <tbody>
         <tr>
           <td class="ct" valign="top" width="7" height="13"><img height="13" src="../imagens/1.png" width="1" border="0"></td>
-          <td class="ct" valign="top" width="490" height="13">Endereço do Beneficiário</td>
+          <td class="ct" valign="top" width="490" height="13">Endereï¿½o do Beneficiï¿½rio</td>
           <td class="ct" valign="top" width="7" height="13"><img height="13" src="../imagens/1.png" width="1" border="0"></td>
           <td class="ct" valign="top" width="34" height="13">UF</td>
           <td class="ct" valign="top" width="7" height="13"><img height="13" src="../imagens/1.png" width="1" border="0"></td>
@@ -225,7 +225,7 @@
           </td>
           <td class=ct valign=top width=7 height=13><img height=13 src="../imagens/1.png" width=1 border=0></td>
           <td class=ct valign=top width=120 height=13>
-            Nosso Número
+            Nosso Nï¿½mero
           </td>
         </tr>
         <tr>
@@ -274,12 +274,12 @@
         </tr>
       </tbody>
     </table>
-   
+
     <table cellspacing=0 cellpadding=0 border=0 height="200">
       <tbody >
         <tr>
           <td class=ct  width=7 height=12></td>
-          <td class=ct  width=564 ><strong>Instruções (Texto de Responsabilidade do Beneficiário):</strong></td>
+          <td class=ct  width=564 ><strong>Instruï¿½ï¿½es (Texto de Responsabilidade do Beneficiï¿½rio):</strong></td>
           <td class=ct  width=7 height=12></td>
           <td class=ct  width=88 >
           </td>
@@ -372,7 +372,7 @@
             Carteira
           </td>
           <td class="ct" valign="top" width="7" height="13"><img height="13" src="../imagens/1.png" width="1" border="0"></td>
-          <td class="ct" valign="top" width="102" height="13">Espécie</td>
+          <td class="ct" valign="top" width="102" height="13">Espï¿½cie</td>
           <td class="ct" valign="top" width="7" height="13"><img height="13" src="../imagens/1.png" width="1" border="0"></td>
           <td class="ct" valign="top" width="144" height="13">Vencimento</td>
           <td class="ct" valign="top" width="7" height="13"><img height="13" src="../imagens/1.png" width="1" border="0"></td>
@@ -388,7 +388,7 @@
           <td class="cp" valign="top" width="7" height="16"><img height="16" src="../imagens/1.png" width="1" border="0"></td>
           <td class="cp" valign="top" width="80" height="16">
             <span class="campo">
-            <?= $carteira ?>          
+            <?= $carteira ?>
             </span>
           </td>
           <td class="cp" valign="top" width="7" height="16"><img height="16" src="../imagens/1.png" width="1" border="0"></td>
@@ -406,7 +406,7 @@
           <td class="cp" valign="top" width="7" height="16"><img height="16" src="../imagens/1.png" width="1" border="0"></td>
           <td class="cp" valign="top" width="164" height="16">
             <span class="campo">
-              <?= $valor_boleto ?>            
+              <?= $valor_boleto ?>
             </span>
           </td>
           <td class="cp" valign="top" width="7" height="16"><img height="16" src="../imagens/1.png" width="1" border="0"></td>
@@ -430,22 +430,22 @@
       </tbody>
     </table>
     <table cellpadding="2" cellspacing="0" border="0">
-      <tbody> 
+      <tbody>
           <tr>
             <td width="400" align="center" style="font: normal 10px Arial;">
               <strong class="campo" align="center">
                 SAC CAIXA:
               </strong>
-               0800 726 0101 (informações, reclamações, sugestões e elogios)
+               0800 726 0101 (informaï¿½ï¿½es, reclamaï¿½ï¿½es, sugestï¿½es e elogios)
             </td>
             <td width="266" align="center" style="font: normal 10px Arial;">
-              Autenticação Mecânica - <strong>Recibo do Pagador</strong>
+              Autenticaï¿½ï¿½o Mecï¿½nica - <strong>Recibo do Pagador</strong>
             </td>
           </tr>
           <tr>
             <td width="400" align="center" style="font: normal 10px Arial;" >
-              <strong class="campo" align="center" > 
-                Para pessoas com deficiência auditiva ou de fala:
+              <strong class="campo" align="center" >
+                Para pessoas com deficiï¿½ncia auditiva ou de fala:
               </strong>
                0800 726 2492
             </td>
@@ -539,13 +539,13 @@
           <td class=cp valign=top width=7 height=12>
               <img height=12 src="../imagens/1.png" width=1 border=0>
             </td>
-          <td class=cp valign=top width=472 height=12>Pagável
-            em qualquer Banco até o vencimento
+          <td class=cp valign=top width=472 height=12>Pagï¿½vel
+            em qualquer Banco atï¿½ o vencimento
           </td>
           <td class=cp valign=top width=7 height=12><img height=12 src="../imagens/1.png" width=1 border=0></td>
           <td class=cp valign=top align=right width=180 height=12>
             <span class="campo">
-            <?php echo ($data_vencimento != "") ? $data_vencimento : "Contra Apresentação" ?>
+            <?php echo ($data_vencimento != "") ? $data_vencimento : "Contra Apresentaï¿½ï¿½o" ?>
             </span>
           </td>
         </tr>
@@ -561,10 +561,10 @@
       <tbody>
         <tr>
           <td class=ct valign=top width=7 height=13><img height=13 src="../imagens/1.png" width=1 border=0></td>
-          <td class=ct valign=top width=472 height=13>Beneficiário: </td>
+          <td class=ct valign=top width=472 height=13>Beneficiï¿½rio: </td>
           <td class=ct valign=top width=7 height=13><img height=13 src="../imagens/1.png" width=1 border=0></td>
-          <td class=ct valign=top width=180 height=13>Agência/Código
-            do Beneficiário
+          <td class=ct valign=top width=180 height=13>Agï¿½ncia/Cï¿½digo
+            do Beneficiï¿½rio
           </td>
         </tr>
         <tr>
@@ -603,7 +603,7 @@
             documento
           </td>
           <td class=ct valign=top width=7 height=13> <img height=13 src="../imagens/1.png" width=1 border=0></td>
-          <td class=ct valign=top width=62 height=13>Espécie
+          <td class=ct valign=top width=62 height=13>Espï¿½cie
             DOC
           </td>
           <td class=ct valign=top width=7 height=13> <img height=13 src="../imagens/1.png" width=1 border=0></td>
@@ -616,7 +616,7 @@
           </td>
           <td class=ct valign=top width=7 height=13> <img height=13 src="../imagens/1.png" width=1 border=0></td>
           <td class=ct valign=top width=180 height=13>Nosso
-            número
+            nï¿½mero
           </td>
         </tr>
         <tr>
@@ -703,7 +703,7 @@
           <td class=ct valign=top height=13 width=7>
             <img height=13 src="../imagens/1.png" width=1 border=0>
           </td>
-          <td class=ct valign=top width=63 height=13>Espécie Moeda</td>
+          <td class=ct valign=top width=63 height=13>Espï¿½cie Moeda</td>
           <td class=ct valign=top height=13 width=7>
             <img height=13 src="../imagens/1.png" width=1 border=0>
           </td>
@@ -803,7 +803,7 @@
               </tbody>
             </table>
           </td>
-          <td valign=top width=468 rowspan=5><font class=ct>Instruções
+          <td valign=top width=468 rowspan=5><font class=ct>Instruï¿½ï¿½es
             (Texto de responsabilidade do cedente)</font><br><br><span class=cp> <FONT class=campo>
             <?php echo $instrucoes1; ?><br>
             <?php echo $instrucoes2; ?><br>
@@ -856,7 +856,7 @@
                 <tr>
                   <td class=ct valign=top width=7 height=13><img height=13 src="../imagens/1.png" width=1 border=0></td>
                   <td class=ct valign=top width=180 height=13>(-)
-                    Outras deduções
+                    Outras deduï¿½ï¿½es
                   </td>
                 </tr>
                 <tr>
@@ -934,7 +934,7 @@
                 <tr>
                   <td class=ct valign=top width=7 height=13><img height=13 src="../imagens/1.png" width=1 border=0></td>
                   <td class=ct valign=top width=180 height=13>(+)
-                    Outros acréscimos
+                    Outros acrï¿½scimos
                   </td>
                 </tr>
                 <tr>
@@ -1024,7 +1024,7 @@
             </span>
           </td>
           <td class=ct valign=top width=7 height=13><img height=13 src="../imagens/1.png" width=1 border=0></td>
-          <td class=ct valign=top width=180 height=13>Cód.
+          <td class=ct valign=top width=180 height=13>Cï¿½d.
             baixa
           </td>
         </tr>
@@ -1042,8 +1042,8 @@
           <td class=ct  width=7 height=12></td>
           <td class=ct  width=409 >Sacador/Avalista</td>
           <td class=ct  width=250 >
-            <div align=right>Autenticação
-              mecânica - <b class=cp>Ficha de Compensação</b>
+            <div align=right>Autenticaï¿½ï¿½o
+              mecï¿½nica - <b class=cp>Ficha de Compensaï¿½ï¿½o</b>
             </div>
           </td>
         </tr>

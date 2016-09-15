@@ -76,7 +76,7 @@ class CaixaTest extends \PHPUnit_Framework_TestCase
         $this->remessa->save(__DIR__.DIRECTORY_SEPARATOR);
 
         $this->assertCount(2, $this->remessa);
-
+        $this->assertFileExists(__DIR__."/".$dateTime->format('d-m-Y')."-remessa.txt");
         foreach($this->remessa as $remessa)
           $this->assertEquals('1234567', $remessa['nosso_numero']);
     }
@@ -87,10 +87,10 @@ class CaixaTest extends \PHPUnit_Framework_TestCase
         $this->push();
         $this->push();
         $this->remessa->save(__DIR__.DIRECTORY_SEPARATOR);
-        $this->remessa->downloadUri();
+        $uri = $this->remessa->downloadUri();
 
         $this->assertCount(2, $this->remessa);
-        $this->assertFileExists(__DIR__."/".$dateTime->format('d-m-Y')."-remessa.txt");
+        $this->assertFileExists($uri);
     }
 
 }

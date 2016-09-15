@@ -1,8 +1,6 @@
 <?php
 namespace BoletoPHP\Boletos;
 
-use BoletoPHP\Model\Remessa;
-
 class CaixaEconomicaFederalSIGCB extends Boleto
 {
 

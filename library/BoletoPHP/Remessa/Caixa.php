@@ -8,10 +8,12 @@ class Caixa implements \Iterator, \Countable
     private $dataCedente;
     private $dadosBoletos;
     private $current = 0;
+    private $model;
 
     public function __construct(array $dadosDoCedente)
     {
         $this->dataCedente = $dadosDoCedente;
+        $this->model = new Remessa();
     }
 
     public function push(array $dados)
@@ -21,7 +23,7 @@ class Caixa implements \Iterator, \Countable
 
     public function save($dir = "/tmp")
     {
-
+        $this->model->save(json_encode($this->dadosBoletos));
     }
 
     public function count()
