@@ -63,7 +63,16 @@ class Remessa
      */
     public function exec($sql)
     {
-        return $this->db->exec($sql);
+        try {
+            $res = $this->db->exec($sql);
+
+            if(! $res)
+                return false;
+
+            return $res;
+        } catch (\Exception $e) {
+            return false;
+        }
     }
 
     /**

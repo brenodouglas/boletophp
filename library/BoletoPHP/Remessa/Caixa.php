@@ -2,14 +2,14 @@
 namespace BoletoPHP\Remessa;
 
 use BoletoPHP\Model\Remessa;
-use Cnab\Banco;
-use Cnab\Remessa\Cnab240\Arquivo;
+use CnabPHP\Remessa as RemessaService;
 
 class Caixa implements \Iterator, \Countable
 {
     private $dataCedente;
     private $dadosBoletos;
     private $remessa;
+    private $lote;
     private $current = 0;
     private $model;
     private $dir = "/tmp/";
@@ -18,8 +18,8 @@ class Caixa implements \Iterator, \Countable
     {
         $this->dataCedente = $dadosDoCedente;
         $this->model = new Remessa();
-        $this->remessa =  new Arquivo(Banco::CAIXA);
-        $this->remessa->configure($dadosDoCedente);
+        $this->remessa =    new RemessaService('104','cnab240_SIGCB', $dadosDoCedente);
+        $this->lote = $this->remessa->addLote(['tipo_servico' => $dadosDoCedente['tipo_servico']]);
     }
 
     public function push(array $dados)
@@ -40,12 +40,17 @@ class Caixa implements \Iterator, \Countable
         $dateTime = new \DateTime();
 
         $this->model->save(json_encode($this->dadosBoletos));
-        foreach( $this->dadosBoleto as $boleto)
-            $this->remessa->insertDetalhe($boleto);
+        foreach( $this->dadosBoletos as $boleto)
+            $this->lote->inserirDetalhe($boleto);
 
-        $dir = $this->dir.$dateTime->format("d-m-Y")."-remessa.txt";
-        $this->remessa->save($dir);
-        return $dir;
+        $dir = $this->dir.$dateTime->format("d-m-Y")."-remessa.ret";
+        return $this->write($dir, $this->remessa->getText());
+    }
+
+    protected function write($dir, $text)
+    {
+        echo $dir.PHP_EOL;
+        return file_put_contents($dir, $text);
     }
 
     public function count()
@@ -56,7 +61,7 @@ class Caixa implements \Iterator, \Countable
     public function downloadUri()
     {
         $dateTime = new \DateTime();
-        retun $dir = $this->dir.$dateTime->format("d-m-Y")."-remessa.txt";
+        return $this->dir.$dateTime->format("d-m-Y")."-remessa.ret";
     }
 
   	public function current()

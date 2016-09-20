@@ -10,33 +10,19 @@ class RemessaTest extends \PHPUnit_Framework_TestCase
         $remessa = new Remessa();
         $this->assertTrue($remessa->save(json_encode(['nome' => 'Fulano sicrano'])));
 
-        $result = $remessa->finadAll();
+        $result = $remessa->findAll();
         $this->assertTrue($result->valid());
-    }
-
-    public function testResetDataBase()
-    {
-        $remessa = new Remessa();
-        $remessa->save(json_encode(['nome' => 'Jax Teller']));
-        $remessa->save(json_encode(['nome' => 'Mr Robot']));
-
-        $allResult = $remessa->findAll();
-
-        $this->assertTrue($allResult->valid());
-
-        $remessa->resetDataBase();
-
-        $allResult = $remessa->findAll();
-        $this->assertFalse($allResult);
     }
 
     public function testExec()
     {
-        
+        $remessa = new Remessa();
+        $this->assertTrue($remessa->exec("SELECT * FROM retorno"));
     }
 
     public function testExecInvalidQuery()
     {
-
+        $remessa = new Remessa();
+        $this->assertFalse($remessa->exec("SELECT * FROM aa"));
     }
 }
